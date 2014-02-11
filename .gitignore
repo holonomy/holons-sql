@@ -1,0 +1,5 @@
+db.sqlite
+db.test.sqlite
+node_modules
+npm-debug.log
+*.swp

@@ -1,0 +1,34 @@
+{
+  "name": "holons-sql",
+  "version": "0.0.0",
+  "description": "holon models as a DAG using bookshelf",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "bookshelfw": "git+https://github.com/holonomy/bookshelfw.git",
+    "bluebird": "~1.0.4",
+    "create-error": "~0.3.1",
+    "underscore": "~1.6.0"
+  },
+  "devDependencies": {
+    "mocha-as-promised": "~2.0.0",
+    "chai-as-promised": "~4.1.0",
+    "chai": "~1.9.0",
+    "mocha": "~1.17.1"
+  },
+  "scripts": {
+    "migrate": "node_modules/bookshelfw/node_modules/bookshelf/node_modules/knex/bin/knex --config node_modules/bookshelfw/config.js migrate:latest",
+    "test": "(export NODE_ENV=test; npm run migrate && mocha -R spec -t 10s test/*.js)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/holonomy/holons-sql.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/holonomy/holons-sql/issues"
+  }
+}
